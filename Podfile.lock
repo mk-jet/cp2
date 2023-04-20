@@ -1,0 +1,20 @@
+PODS:
+  - SwiftChart (1.0.1)
+  - TinyConstraints (4.0.2)
+
+DEPENDENCIES:
+  - SwiftChart
+  - TinyConstraints
+
+SPEC REPOS:
+  trunk:
+    - SwiftChart
+    - TinyConstraints
+
+SPEC CHECKSUMS:
+  SwiftChart: ba767a678d568a5ee22d419e146a0582865e1aff
+  TinyConstraints: 7b7ccc0c485bb3bb47082138ff28bc33cd49897f
+
+PODFILE CHECKSUM: 081e38f7352c437084015e5557388cb4f98dd410
+
+COCOAPODS: 1.12.0
