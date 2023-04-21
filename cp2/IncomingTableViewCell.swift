@@ -1,10 +1,3 @@
-//
-//  IncomingTableViewCell.swift
-//  cp2
-//
-//  Created by Maksim Komolikov on 21.03.2023.
-//
-
 import UIKit
 
 class IncomingTableViewCell: UITableViewCell {

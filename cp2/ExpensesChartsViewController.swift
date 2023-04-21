@@ -173,7 +173,7 @@ class ExpensesChartsViewController: UIViewController {
         let today = Date.init()
         let dateFormatter = DateFormatter()
         var counter = 0.0
-        fetchData()
+        fetchIndexData()
         // Данные за неделю и месяц разбиваются по дням
         if timeInterval < 32 {
             dateFormatter.dateFormat = "YYMMdd"
@@ -232,7 +232,7 @@ class ExpensesChartsViewController: UIViewController {
     }
     
     // Получает/обновляет данные расходов
-    func fetchData() {
+    func fetchIndexData() {
         do {
             let request = Expense.fetchRequest() as NSFetchRequest<Expense>
             let sort = NSSortDescriptor(key: "date", ascending: false)

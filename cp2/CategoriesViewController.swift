@@ -73,6 +73,7 @@ class CategoriesViewController: UIViewController, UITableViewDelegate, UITableVi
         headerView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
     }
     
+    // Добавляет категории
     @IBAction func addCategoryButtonTapped(_ sender: Any) {
         print("Button tapped")
         let addingAlert = UIAlertController(title: "Добавить категорию расходов", message: nil, preferredStyle: .alert)
@@ -81,7 +82,6 @@ class CategoriesViewController: UIViewController, UITableViewDelegate, UITableVi
             textField.placeholder = "Введите название"
             textField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
         }
-        
         let cancelButton = UIAlertAction(title: "Отменить", style: .cancel)
         submitButton = UIAlertAction(title: "Добавить", style: .default) { (action) in
             let textField = addingAlert.textFields![0]
@@ -97,7 +97,8 @@ class CategoriesViewController: UIViewController, UITableViewDelegate, UITableVi
         addingAlert.addAction(submitButton)
         self.present(addingAlert, animated: true, completion: nil)
     }
-    private var submitButton: UIAlertAction! //Переменная и метод, необходимые, чтобы добавить можно было только уникальное название
+    //Переменная и метод, необходимые, чтобы добавить можно было только уникальное название
+    private var submitButton: UIAlertAction!
     @objc private func textFieldDidChange(_ field: UITextField) {
         var nameUnique = true
         if categories != nil && field.text != nil {
@@ -123,6 +124,7 @@ class CategoriesViewController: UIViewController, UITableViewDelegate, UITableVi
         } catch { print (error) }
     }
     
+    // Считает-обновляет баланс
     func updateBalance() {
         var sum = 0.0
         if let incomes { for each in incomes { sum += each.rate} }
@@ -130,7 +132,8 @@ class CategoriesViewController: UIViewController, UITableViewDelegate, UITableVi
         currentBalanceLabel.text = "Баланс: \(prepareRate(sum))"
     }
     
-    func prepareRate (_ oldRate: Double) -> String { // Для удобства чтения, разбивает число на куски по три символа и добавляет знак валюты
+    // Для удобства чтения, разбивает число на куски по три символа и добавляет знак валюты
+    func prepareRate (_ oldRate: Double) -> String {
         var rate = String(round(oldRate))
         rate.remove(at: rate.index(before: rate.endIndex))
         rate.remove(at: rate.index(before: rate.endIndex))
@@ -148,6 +151,7 @@ class CategoriesViewController: UIViewController, UITableViewDelegate, UITableVi
         return newRate
     }
     
+    // Стандартные опции для таблицы
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { categories?.count ?? 0 }
     func numberOfSections(in tableView: UITableView) -> Int { return 1 }
 }

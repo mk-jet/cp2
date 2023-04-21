@@ -16,9 +16,13 @@ class IncomingViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-//        deleteStoredData()
-//        setTestData()
+        deleteStoredData() // < удаляет сохраненные данные
+        setTestData() // < создаёт тестовые данные
         setViewOptions()
+        fetchIndexData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         fetchIndexData()
     }
     
