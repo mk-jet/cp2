@@ -129,11 +129,11 @@ class CategoriesViewController: UIViewController, UITableViewDelegate, UITableVi
         var sum = 0.0
         if let incomes { for each in incomes { sum += each.rate} }
         if let expenses { for each in expenses { sum -= each.rate }  }
-        currentBalanceLabel.text = "Баланс: \(prepareRate(sum))"
+        currentBalanceLabel.text = "Баланс: \(formatRate(sum))"
     }
     
     // Для удобства чтения, разбивает число на куски по три символа и добавляет знак валюты
-    func prepareRate (_ oldRate: Double) -> String {
+    func formatRate (_ oldRate: Double) -> String {
         var rate = String(round(oldRate))
         rate.remove(at: rate.index(before: rate.endIndex))
         rate.remove(at: rate.index(before: rate.endIndex))
