@@ -543,6 +543,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="48" estimatedRowHeight="48" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Fpu-v3-HeH">
                                 <rect key="frame" x="0.0" y="152" width="320" height="396"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ExpensesTableViewCell" rowHeight="48" id="QRB-nc-SID" customClass="ExpensesTableViewCell" customModule="cp2" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="320" height="48"/>
@@ -658,7 +659,7 @@
                                 <rect key="frame" x="0.0" y="88" width="320" height="29"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ExpensesCategory" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ql-zo-bLs">
-                                <rect key="frame" x="64" y="24" width="240" height="64"/>
+                                <rect key="frame" x="64" y="24" width="192" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="YoV-z5-Oji"/>
                                 </constraints>
@@ -785,7 +786,7 @@
                             <constraint firstItem="vba-3T-qJ5" firstAttribute="trailing" secondItem="cvW-jh-1IC" secondAttribute="trailing" id="HJi-QM-XZc"/>
                             <constraint firstItem="1Ql-zo-bLs" firstAttribute="top" secondItem="vba-3T-qJ5" secondAttribute="top" constant="24" id="JXM-PS-lxt"/>
                             <constraint firstItem="1Ql-zo-bLs" firstAttribute="centerY" secondItem="jMV-Nv-z2q" secondAttribute="centerY" id="Ksd-US-zhJ"/>
-                            <constraint firstItem="vba-3T-qJ5" firstAttribute="trailing" secondItem="1Ql-zo-bLs" secondAttribute="trailing" constant="16" id="M5o-GW-7lw"/>
+                            <constraint firstItem="vba-3T-qJ5" firstAttribute="trailing" secondItem="1Ql-zo-bLs" secondAttribute="trailing" constant="64" id="M5o-GW-7lw"/>
                             <constraint firstItem="vba-3T-qJ5" firstAttribute="bottom" secondItem="Z6S-8P-I6t" secondAttribute="bottom" id="MjW-yh-LaU"/>
                             <constraint firstItem="STb-Ld-djY" firstAttribute="height" secondItem="cvW-jh-1IC" secondAttribute="height" multiplier="10" id="Sy3-yS-ygX"/>
                             <constraint firstItem="cvW-jh-1IC" firstAttribute="top" secondItem="1Ql-zo-bLs" secondAttribute="bottom" id="W8g-3i-AlC"/>
